@@ -35,7 +35,7 @@ export default function App() {
 
       <section
         className="hero"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/4ftfinished.jpeg)` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)` }}
       >
         <div className="container hero-inner">
           <div className="hero-copy">
