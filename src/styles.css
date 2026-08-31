@@ -44,7 +44,7 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 .tagline{margin:0;color:rgba(255,255,255,0.92);font-weight:300;font-size:0.95rem}
 
 /* Navigation */
-.site-nav{display:flex;gap:1rem;align-items:right;justify-content:right}
+.site-nav{display:flex;gap:1rem;align-items:center;justify-content:flex-end}
 .site-nav a, .site-nav-link{color:rgba(255,255,255,0.95);text-decoration:none;padding:.35rem .6rem;border-radius:8px;font-weight:600}
 .site-nav a:hover, .site-nav-link:hover{background:rgba(255,255,255,0.04)}
 .site-nav .btn--small{padding:.4rem .7rem;background:rgba(255,255,255,0.12);color:#fff}
@@ -53,13 +53,13 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 .section{padding:calc(var(--gap)*2);max-width:var(--container-max);margin:0 auto}
 .container{max-width:var(--container-max);margin:0 auto;padding:0 1rem}
 .hero{
-  background-size: contain; /* show more of the logo without cropping */
-  background-repeat: no-repeat;
-  background-position: center 12%; /* slightly above center so logo is visible */
-  padding: 6rem 0 8rem; /* more top padding so content doesn't overlap the logo */
+  background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18));
+  padding: 5.5rem 0 6.5rem;
   min-height: 360px;
   display: flex;
-  align-items: left;
+  flex-direction: column;
+  align-items: stretch;
+  color: #fff;
 }
 .hero-inner{display:flex;align-items:center;justify-content:center}
 .hero-copy{max-width:780px;text-align:center;color:#fff;padding:2.5rem}
@@ -69,11 +69,12 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
   .hero-copy{padding:1.5rem}
 }
 /* Header inside hero: logo left, nav right */
-.hero .site-header{width:100%;position:relative;padding:0}
-.hero .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.hero .site-header{width:100%;position:relative;padding:0;background:transparent;color:#fff}
+.hero .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0}
 .brand-left{display:flex;align-items:center}
 .brand-right{display:flex;align-items:center}
 .brand-center{flex:1;text-align:center}
+.hero .brand-center{display:none}
 .brand-center .brand-copy{display:none}
 
 @media (min-width: 900px) {

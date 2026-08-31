@@ -11,10 +11,7 @@ const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 export default function App() {
   return (
     <div className="site">
-      <section
-        className="hero"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)` }}
-      >
+      <section className="hero">
         <div className="container site-header hero-top">
           <div className="brand-left">
             <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
