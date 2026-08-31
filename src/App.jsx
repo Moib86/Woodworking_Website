@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
-import { Routes, Route, NavLink } from "react-router-dom";
+import React, { Suspense } from "react";
+import { Routes, Route, NavLink, Link } from "react-router-dom";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
