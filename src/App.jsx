@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Gallery from "./components/Gallery";
-import LargeHanger from "./components/LargeHanger";
-import Testimonials from "./components/Testimonials";
-import About from "./components/About";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
+const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
+const TestimonialsPage = React.lazy(() => import("./pages/AboutPage"));
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 
 export default function App() {
   return (
@@ -46,39 +49,16 @@ export default function App() {
           </div>
         </div>
       </section>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <main>
-              <section id="gallery" className="section">
-                <h2>Gallery</h2>
-                <Gallery />
-              </section>
-
-              <section id="Hangers" className="section">
-                <h2>Large Coat Hanger</h2>
-                <LargeHanger />
-              </section>
-
-              <section id="testimonials" className="section">
-                <h2>Testimonials</h2>
-                <Testimonials />
-              </section>
-
-              <section id="about" className="section">
-                <h2>About & Contact</h2>
-                <About />
-              </section>
-            </main>
-          }
-        />
-
-        <Route path="/gallery" element={<div className="section"><h2>Gallery</h2><Gallery/></div>} />
-        <Route path="/projects/large-hanger" element={<div className="section"><h2>Large Coat Hanger</h2><LargeHanger/></div>} />
-        <Route path="/testimonials" element={<div className="section"><h2>Testimonials</h2><Testimonials/></div>} />
-        <Route path="/about" element={<div className="section"><h2>About & Contact</h2><About/></div>} />
-      </Routes>
+      <Suspense fallback={<div className="section">Loading…</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Suspense>
 
       <footer className="site-footer">
         <small>© {new Date().getFullYear()} KarlWoodWorking</small>
