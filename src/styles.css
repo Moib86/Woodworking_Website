@@ -44,7 +44,7 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 .tagline{margin:0;color:rgba(255,255,255,0.92);font-weight:300;font-size:0.95rem}
 
 /* Navigation */
-.site-nav{display:flex;gap:1rem;align-items:center}
+.site-nav{display:flex;gap:1rem;align-items:right;justify-content:right}
 .site-nav a, .site-nav-link{color:rgba(255,255,255,0.95);text-decoration:none;padding:.35rem .6rem;border-radius:8px;font-weight:600}
 .site-nav a:hover, .site-nav-link:hover{background:rgba(255,255,255,0.04)}
 .site-nav .btn--small{padding:.4rem .7rem;background:rgba(255,255,255,0.12);color:#fff}
@@ -59,7 +59,7 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
   padding: 6rem 0 8rem; /* more top padding so content doesn't overlap the logo */
   min-height: 360px;
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 .hero-inner{display:flex;align-items:center;justify-content:center}
 .hero-copy{max-width:780px;text-align:center;color:#fff;padding:2.5rem}
