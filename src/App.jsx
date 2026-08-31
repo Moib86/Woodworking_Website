@@ -8,15 +8,35 @@ export default function App() {
   return (
     <div className="site">
       <header className="site-header">
-        <div className="brand-wrap">
-          <div className="brand-mark" aria-label="KarlWoodWorking logo">
-              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo" />
+        <div className="container header-grid">
+          <div className="brand-left">
+            <a href="/" aria-label="Karl Wood Working home">
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
+            </a>
+          </div>
+
+          <div className="brand-center">
+            <div className="brand-copy">
+              <h1>Karl Wood Working</h1>
+              <p className="tagline">Handcrafted furniture & fixtures</p>
             </div>
-          <div className="brand-copy">
-            <h1></h1>
+          </div>
+
+          <div className="brand-right">
+            <a href="#about" className="btn">Contact</a>
           </div>
         </div>
       </header>
+
+      <section className="hero">
+        <div className="container hero-inner">
+          <div className="hero-copy">
+            <h2>Beautiful, built-to-last woodwork</h2>
+            <p>Custom projects designed and finished with care.</p>
+            <p><a href="#gallery" className="btn">View Gallery</a></p>
+          </div>
+        </div>
+      </section>
 
       <main>
         <section id="gallery" className="section">
