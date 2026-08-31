@@ -17,7 +17,7 @@
   --gap: 1rem;
   --radius: 10px;
   --cta-radius: 999px;
-  --cta-bg: var(--accent);
+  --cta-bg: #2b6b3a; /* brighter green CTA */
   --cta-color: #ffffff;
 
   /* Elevation */
