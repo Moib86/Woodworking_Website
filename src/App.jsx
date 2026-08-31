@@ -4,7 +4,7 @@ import { Routes, Route, NavLink, Link } from "react-router-dom";
 const Home = React.lazy(() => import("./pages/Home"));
 const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
-const TestimonialsPage = React.lazy(() => import("./pages/AboutPage"));
+const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
 const AboutPage = React.lazy(() => import("./pages/AboutPage"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 
@@ -13,11 +13,6 @@ export default function App() {
     <div className="site">
       <header className="site-header">
         <div className="container header-grid">
-          <div className="brand-left">
-            <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
-              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
-            </NavLink>
-          </div>
 
           <div className="brand-center">
             <div className="brand-copy">
@@ -45,7 +40,7 @@ export default function App() {
           <div className="hero-copy">
             <h2>Beautiful, built-to-last woodwork</h2>
             <p>Custom projects designed and finished with care.</p>
-            <p><Link to="/gallery" className="btn btn--primary">View Gallery</Link></p>
+            {/* <p><Link to="/gallery" className="btn btn--primary">View Gallery</Link></p> */}
           </div>
         </div>
       </section>

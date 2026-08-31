@@ -52,9 +52,22 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 
 .section{padding:calc(var(--gap)*2);max-width:var(--container-max);margin:0 auto}
 .container{max-width:var(--container-max);margin:0 auto;padding:0 1rem}
-.hero{background-size:cover;background-position:center;padding:4.2rem 0}
+.hero{
+  background-size: contain; /* show more of the logo without cropping */
+  background-repeat: no-repeat;
+  background-position: center 12%; /* slightly above center so logo is visible */
+  padding: 6rem 0 8rem; /* more top padding so content doesn't overlap the logo */
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
 .hero-inner{display:flex;align-items:center;justify-content:center}
 .hero-copy{max-width:780px;text-align:center;color:#fff;padding:2.5rem}
+
+@media (max-width: 768px) {
+  .hero{background-position: center 8%; padding:4rem 0 5rem; min-height:300px}
+  .hero-copy{padding:1.5rem}
+}
 .hero-copy h2{font-size:clamp(1.6rem,3.4vw,2.6rem);margin:0 0 .5rem}
 .hero-copy p{color:rgba(255,255,255,0.95);margin:0 0 1rem}
 
