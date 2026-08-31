@@ -25,7 +25,7 @@ export default function App() {
           <div className="brand-right">
             <nav className="site-nav" aria-label="Primary">
               <a href="#gallery">Gallery</a>
-              <a href="#4ft">Hangers</a>
+              <a href="#Hangers">Hangers</a>
               <a href="#testimonials">Testimonials</a>
               <a href="#about" className="btn btn--small">Contact</a>
             </nav>
@@ -52,7 +52,7 @@ export default function App() {
           <Gallery />
         </section>
 
-        <section id="4 ft Coat Hanger" className="section">
+        <section id="Hangers" className="section">
           <h2>Large Coat Hanger</h2>
           <LargeHanger />
         </section>
