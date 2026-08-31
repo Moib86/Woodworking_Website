@@ -12,27 +12,38 @@ export default function App() {
   return (
     <div className="site">
       <section className="hero">
-        <div className="container site-header hero-top">
-          <div className="brand-left">
-            <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
-              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
-            </NavLink>
-          </div>
-
-          <div className="brand-center">
-            <div className="brand-copy">
-              <h1>Karl Wood Working</h1>
-              <p className="tagline">Handcrafted furniture & fixtures</p>
+        <div
+          className="site-header hero-top"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="container">
+            <div className="brand-left">
+              <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
+                <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
+              </NavLink>
             </div>
-          </div>
 
-          <div className="brand-right">
-            <nav className="site-nav" aria-label="Primary">
-              <NavLink to="/gallery" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Gallery</NavLink>
-              <NavLink to="/projects/large-hanger" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Hangers</NavLink>
-              <NavLink to="/testimonials" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Testimonials</NavLink>
-              <NavLink to="/contact" className={({isActive}) => 'btn btn--small' + (isActive ? ' active' : '')}>Contact</NavLink>
-            </nav>
+            <div className="brand-center">
+              <div className="brand-copy">
+                <h1>Karl Wood Working</h1>
+                <p className="tagline">Handcrafted furniture & fixtures</p>
+              </div>
+            </div>
+
+            <div className="brand-right">
+              <nav className="site-nav" aria-label="Primary">
+                <NavLink to="/gallery" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Gallery</NavLink>
+                <NavLink to="/projects/large-hanger" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Hangers</NavLink>
+                <NavLink to="/testimonials" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Testimonials</NavLink>
+                <NavLink to="/about" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>About</NavLink>
+                <NavLink to="/contact" className={({isActive}) => 'btn btn--small' + (isActive ? ' active' : '')}>Contact</NavLink>
+              </nav>
+            </div>
           </div>
         </div>
 

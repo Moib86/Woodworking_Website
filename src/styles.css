@@ -71,11 +71,21 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 /* Header inside hero: logo left, nav right */
 .hero .site-header{width:100%;position:relative;padding:0;background:transparent;color:#fff}
 .hero .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0}
+.hero .site-header{min-height:140px}
+.hero .site-header{background-size:cover;background-position:center;background-repeat:no-repeat}
 .brand-left{display:flex;align-items:center}
 .brand-right{display:flex;align-items:center}
 .brand-center{flex:1;text-align:center}
 .hero .brand-center{display:none}
 .brand-center .brand-copy{display:none}
+
+/* Hide the small inline logo when the header uses the background image */
+.hero .brand-left img{display:none}
+
+@media (max-width:768px) {
+  .hero .site-header{min-height:110px}
+  .hero .brand-left img{display:block;width:56px;height:56px}
+}
 
 @media (min-width: 900px) {
   .brand-center .brand-copy{display:block;color:#fff}
