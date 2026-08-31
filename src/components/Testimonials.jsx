@@ -4,7 +4,7 @@ export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    fetch("/testimonials.json")
+    fetch(`${import.meta.env.BASE_URL}testimonials.json`)
       .then((r) => r.json())
       .then((data) => setTestimonials(data || []))
       .catch(() => setTestimonials([]));

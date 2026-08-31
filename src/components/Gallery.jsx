@@ -6,7 +6,7 @@ export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   useEffect(() => {
-    fetch("/images.json")
+    fetch(`${import.meta.env.BASE_URL}images.json`)
       .then((r) => r.json())
       .then((data) => setImages(data || []))
       .catch(() => setImages([]));
@@ -26,14 +26,14 @@ export default function Gallery() {
             onClick={() => setLightboxIndex(idx)}
             aria-label={`Open ${filename}`}
           >
-            <img src={`/images/${filename}`} alt={filename} loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}images/${filename}`} alt={filename} loading="lazy" />
           </button>
         ))}
       </div>
 
       {lightboxIndex >= 0 && (
         <Lightbox
-          images={images.map((f) => `/images/${f}`)}
+          images={images.map((f) => `${import.meta.env.BASE_URL}images/${f}`)}
           startIndex={lightboxIndex}
           onClose={() => setLightboxIndex(-1)}
         />

@@ -9,8 +9,8 @@ export default function App() {
       <header className="site-header">
         <div className="brand-wrap">
           <div className="brand-mark" aria-label="KarlWoodWorking logo">
-            <img src="/images/logo.png" alt="KarlWoodWorking logo" className="brand-logo" />
-          </div>
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo" />
+            </div>
           <div className="brand-copy">
             <h1>Karl Wood Working</h1>
           </div>
