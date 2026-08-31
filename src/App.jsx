@@ -13,7 +13,7 @@ export default function App() {
               <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo" />
             </div>
           <div className="brand-copy">
-            <h1>Karl Wood Working</h1>
+            <h1></h1>
           </div>
         </div>
       </header>
