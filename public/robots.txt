@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Moib86.github.io/Woodworking_Website/sitemap.xml
