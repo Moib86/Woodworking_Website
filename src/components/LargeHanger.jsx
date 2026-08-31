@@ -16,23 +16,19 @@ export default function Gallery() {
     return <p>No images yet. Add photos to <code>public/images/</code> and list them in <code>public/largehanger.json</code>.</p>;
   }
 
-  // Show only the first image as a large preview; open Lightbox (all images)
-  // when the preview is clicked.
   return (
     <>
-      <div
-        className="large-preview"
-        role="button"
-        tabIndex={0}
-        onClick={() => setLightboxIndex(0)}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setLightboxIndex(0); }}
-        aria-label={`Open ${images[0]}`}
-      >
-        <img
-          src={`${import.meta.env.BASE_URL}images/${images[0]}`}
-          alt={images[0]}
-          loading="lazy"
-        />
+      <div className="gallery-grid">
+        {images.map((filename, idx) => (
+          <button
+            key={filename}
+            className="gallery-item"
+            onClick={() => setLightboxIndex(idx)}
+            aria-label={`Open ${filename}`}
+          >
+            <img src={`${import.meta.env.BASE_URL}images/${filename}`} alt={filename} loading="lazy" />
+          </button>
+        ))}
       </div>
 
       {lightboxIndex >= 0 && (
