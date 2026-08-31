@@ -4,7 +4,7 @@ import { Routes, Route, NavLink, Link } from "react-router-dom";
 const Home = React.lazy(() => import("./pages/Home"));
 const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
-const TestimonialsPage = React.lazy(() => import("./pages/TestimonialsPage"));
+const TestimonialsPage = React.lazy(() => import("./pages/Testimonials"));
 const AboutPage = React.lazy(() => import("./pages/AboutPage"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 
