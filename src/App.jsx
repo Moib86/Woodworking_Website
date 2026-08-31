@@ -10,7 +10,7 @@ export default function App() {
       <header className="site-header">
         <div className="container header-grid">
           <div className="brand-left">
-            <a href="/" aria-label="Karl Wood Working home">
+            <a href="#top" aria-label="Karl Wood Working home">
               <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
             </a>
           </div>
@@ -23,17 +23,25 @@ export default function App() {
           </div>
 
           <div className="brand-right">
-            <a href="#about" className="btn">Contact</a>
+            <nav className="site-nav" aria-label="Primary">
+              <a href="#gallery">Gallery</a>
+              <a href="#4ft">Hangers</a>
+              <a href="#testimonials">Testimonials</a>
+              <a href="#about" className="btn btn--small">Contact</a>
+            </nav>
           </div>
         </div>
       </header>
 
-      <section className="hero">
+      <section
+        className="hero"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/4ftfinished.jpeg)` }}
+      >
         <div className="container hero-inner">
           <div className="hero-copy">
             <h2>Beautiful, built-to-last woodwork</h2>
             <p>Custom projects designed and finished with care.</p>
-            <p><a href="#gallery" className="btn">View Gallery</a></p>
+            <p><a href="#gallery" className="btn btn--primary">View Gallery</a></p>
           </div>
         </div>
       </section>
