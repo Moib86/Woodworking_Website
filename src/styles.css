@@ -16,6 +16,9 @@
   --container-max: 1100px;
   --gap: 1rem;
   --radius: 10px;
+  --cta-radius: 999px;
+  --cta-bg: var(--accent);
+  --cta-color: #ffffff;
 
   /* Elevation */
   --shadow-1: 0 6px 18px rgba(20,20,20,0.06);
@@ -58,6 +61,20 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 .btn{display:inline-block;padding:.5rem 1rem;border-radius:8px;background:var(--accent);color:#fff;border:none;cursor:pointer;text-decoration:none}
 .btn--primary{background:#fff;color:var(--text);padding:.6rem 1.1rem;border-radius:999px;font-weight:700}
 .btn--primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+
+/* CTA tweaks */
+.btn--primary{background:var(--cta-bg);color:var(--cta-color);border-radius:var(--cta-radius);padding:.7rem 1.25rem}
+.btn--primary:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+.btn--small{border-radius:calc(var(--cta-radius) / 2);padding:.4rem .7rem}
+
+/* Hero entrance animations */
+.hero-copy h2, .hero-copy p, .hero-copy .btn--primary{opacity:0;transform:translateY(10px)}
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0); }
+}
+.hero-copy h2{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) .15s both}
+.hero-copy p{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) .35s both}
+.hero-copy .btn--primary{animation:fadeUp .6s cubic-bezier(.2,.8,.2,1) .6s both}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:calc(var(--gap) * 0.75)}
 .gallery-item{border:0;padding:0;background:transparent;cursor:pointer}
 .gallery-item img{
