@@ -68,6 +68,23 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
   .hero{background-position: center 8%; padding:4rem 0 5rem; min-height:300px}
   .hero-copy{padding:1.5rem}
 }
+/* Header inside hero: logo left, nav right */
+.hero .site-header{width:100%;position:relative;padding:0}
+.hero .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand-left{display:flex;align-items:center}
+.brand-right{display:flex;align-items:center}
+.brand-center{flex:1;text-align:center}
+.brand-center .brand-copy{display:none}
+
+@media (min-width: 900px) {
+  .brand-center .brand-copy{display:block;color:#fff}
+}
+
+@media (max-width:768px) {
+  .hero .site-header .container{gap:.6rem}
+  .brand-center{display:none}
+  .site-nav{gap:.5rem}
+}
 .hero-copy h2{font-size:clamp(1.6rem,3.4vw,2.6rem);margin:0 0 .5rem}
 .hero-copy p{color:rgba(255,255,255,0.95);margin:0 0 1rem}
 

@@ -11,8 +11,16 @@ const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 export default function App() {
   return (
     <div className="site">
-      <header className="site-header">
-        <div className="container header-grid">
+      <section
+        className="hero"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)` }}
+      >
+        <div className="container site-header hero-top">
+          <div className="brand-left">
+            <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
+            </NavLink>
+          </div>
 
           <div className="brand-center">
             <div className="brand-copy">
@@ -26,21 +34,15 @@ export default function App() {
               <NavLink to="/gallery" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Gallery</NavLink>
               <NavLink to="/projects/large-hanger" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Hangers</NavLink>
               <NavLink to="/testimonials" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Testimonials</NavLink>
-              <NavLink to="/about" className={({isActive}) => 'btn btn--small' + (isActive ? ' active' : '')}>Contact</NavLink>
+              <NavLink to="/contact" className={({isActive}) => 'btn btn--small' + (isActive ? ' active' : '')}>Contact</NavLink>
             </nav>
           </div>
         </div>
-      </header>
 
-      <section
-        className="hero"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)` }}
-      >
         <div className="container hero-inner">
           <div className="hero-copy">
             <h2>Beautiful, built-to-last woodwork</h2>
             <p>Custom projects designed and finished with care.</p>
-            {/* <p><Link to="/gallery" className="btn btn--primary">View Gallery</Link></p> */}
           </div>
         </div>
       </section>
