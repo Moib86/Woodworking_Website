@@ -26,6 +26,10 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neu
   background:#f6f6f6; /* subtle backdrop for images with different aspect ratios */
 }
 
+/* Large single-image preview used by LargeHanger component */
+.large-preview{cursor:pointer;max-width:900px;margin:0 auto;border-radius:8px;overflow:hidden}
+.large-preview img{width:100%;height:auto;display:block;box-shadow:0 6px 18px rgba(0,0,0,0.15);background:#f6f6f6}
+
 .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .testimonial{background:#fff;border:1px solid #eee;padding:1rem;border-radius:8px}
 .quote{font-style:italic;margin:0 0 .5rem}
