@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Gallery from "../components/Gallery";
 import LargeHanger from "../components/LargeHanger";
 import Testimonials from "../components/Testimonials";
@@ -7,6 +8,13 @@ import About from "../components/About";
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Karl Wood Working — Handcrafted furniture & fixtures</title>
+        <meta name="description" content="Karl Wood Working — custom, handcrafted wood projects. Browse the gallery and contact for commissions." />
+        <meta property="og:title" content="Karl Wood Working" />
+        <meta property="og:description" content="Custom woodworking projects — gallery of finished pieces." />
+        <meta property="og:image" content={`${import.meta.env.BASE_URL}images/2ftdecor.png`} />
+      </Helmet>
       <section
         className="hero"
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/2ftdecor.png)` }}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import Lightbox from "../components/Lightbox";
 import projects from "../data/projects";
@@ -21,6 +22,13 @@ export default function ProjectDetail() {
 
   return (
     <div className="section">
+      <Helmet>
+        <title>{project.title} — Karl Wood Working</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:title" content={project.title} />
+        <meta property="og:description" content={project.description} />
+        <meta property="og:image" content={imageUrls[0]} />
+      </Helmet>
       <p><Link to="/gallery">← Back to Gallery</Link></p>
       <h2>{project.title}</h2>
       <p>{project.description}</p>
