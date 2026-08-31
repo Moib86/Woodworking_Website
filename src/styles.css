@@ -45,9 +45,10 @@ body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg
 
 /* Navigation */
 .site-nav{display:flex;gap:1rem;align-items:center}
-.site-nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:.35rem .6rem;border-radius:8px;font-weight:600}
-.site-nav a:hover{background:rgba(255,255,255,0.04)}
+.site-nav a, .site-nav-link{color:rgba(255,255,255,0.95);text-decoration:none;padding:.35rem .6rem;border-radius:8px;font-weight:600}
+.site-nav a:hover, .site-nav-link:hover{background:rgba(255,255,255,0.04)}
 .site-nav .btn--small{padding:.4rem .7rem;background:rgba(255,255,255,0.12);color:#fff}
+.site-nav-link.active, .site-nav a.active{background:rgba(255,255,255,0.08);box-shadow:var(--shadow-1)}
 
 .section{padding:calc(var(--gap)*2);max-width:var(--container-max);margin:0 auto}
 .container{max-width:var(--container-max);margin:0 auto;padding:0 1rem}

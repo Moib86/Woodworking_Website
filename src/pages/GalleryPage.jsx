@@ -1,11 +1,14 @@
-import React from "react";
-import Gallery from "../components/Gallery";
+import React, { Suspense } from "react";
+
+const Gallery = React.lazy(() => import("../components/Gallery"));
 
 export default function GalleryPage() {
   return (
-    <div className="section">
-      <h2>Gallery</h2>
-      <Gallery />
-    </div>
+    <Suspense fallback={<div className="section">Loading gallery…</div>}>
+      <div className="section">
+        <h2>Gallery</h2>
+        <Gallery />
+      </div>
+    </Suspense>
   );
 }

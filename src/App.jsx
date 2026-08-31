@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
@@ -14,9 +14,9 @@ export default function App() {
       <header className="site-header">
         <div className="container header-grid">
           <div className="brand-left">
-            <Link to="/" aria-label="Karl Wood Working home">
+            <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
               <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="KarlWoodWorking logo" className="brand-logo-small" />
-            </Link>
+            </NavLink>
           </div>
 
           <div className="brand-center">
@@ -28,10 +28,10 @@ export default function App() {
 
           <div className="brand-right">
             <nav className="site-nav" aria-label="Primary">
-              <Link to="/gallery">Gallery</Link>
-              <Link to="/projects/large-hanger">Hangers</Link>
-              <Link to="/testimonials">Testimonials</Link>
-              <Link to="/about" className="btn btn--small">Contact</Link>
+              <NavLink to="/gallery" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Gallery</NavLink>
+              <NavLink to="/projects/large-hanger" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Hangers</NavLink>
+              <NavLink to="/testimonials" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Testimonials</NavLink>
+              <NavLink to="/about" className={({isActive}) => 'btn btn--small' + (isActive ? ' active' : '')}>Contact</NavLink>
             </nav>
           </div>
         </div>
