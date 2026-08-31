@@ -11,16 +11,16 @@ const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 export default function App() {
   return (
     <div className="site">
-      <section className="hero">
-        <div
-          className="site-header hero-top"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
+      <section
+        className="hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/logo.png)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="site-header hero-top">
           <div className="container">
             <div className="brand-left">
               <NavLink to="/" aria-label="Karl Wood Working home" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>
