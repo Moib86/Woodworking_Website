@@ -1,5 +1,6 @@
 import React from "react";
 import Gallery from "./components/Gallery";
+import LargeHanger from "./components/LargeHanger";
 import Testimonials from "./components/Testimonials";
 import About from "./components/About";
 
@@ -21,6 +22,11 @@ export default function App() {
         <section id="gallery" className="section">
           <h2>Gallery</h2>
           <Gallery />
+        </section>
+
+        <section id="4 ft Coat Hanger" className="section">
+          <h2>Large Coat Hanger</h2>
+          <LargeHanger />
         </section>
 
         <section id="testimonials" className="section">
