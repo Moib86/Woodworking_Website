@@ -37,7 +37,7 @@ export default function App() {
 
             <div className="brand-right">
               <nav className="site-nav" aria-label="Primary">
-                <NavLink to="/gallery" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Gallery</NavLink>
+                <a href="/#gallery" className="site-nav-link">Gallery</a>
                 <NavLink to="/projects/large-hanger" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Hangers</NavLink>
                 <NavLink to="/testimonials" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>Testimonials</NavLink>
                 <NavLink to="/about" className={({isActive}) => isActive ? 'site-nav-link active' : 'site-nav-link'}>About</NavLink>
