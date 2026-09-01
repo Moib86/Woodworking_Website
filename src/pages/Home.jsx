@@ -31,7 +31,9 @@ export default function Home() {
       <main>
         <section id="gallery" className="section">
           <h2>Gallery</h2>
-          <Gallery />
+          <p>Here is a selection of recent finished projects to give you a sense of style and scale. Click any image to view larger or visit the full gallery for more.</p>
+          <Gallery limit={8} />
+          <p style={{marginTop: '1rem'}}><a href="/gallery" className="btn">View full gallery</a></p>
         </section>
 
         <section id="Hangers" className="section">
