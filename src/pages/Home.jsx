@@ -15,19 +15,6 @@ export default function Home() {
         <meta property="og:description" content="Custom woodworking projects — gallery of finished pieces." />
         <meta property="og:image" content={`${import.meta.env.BASE_URL}images/2ftdecor.png`} />
       </Helmet>
-      <section
-        className="hero"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.18)), url(${import.meta.env.BASE_URL}images/2ftdecor.png)` }}
-      >
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <h2>Beautiful, built-to-last woodwork</h2>
-            <p>Custom projects designed and finished with care.</p>
-            <p><a href="/gallery" className="btn btn--primary">View Gallery</a></p>
-          </div>
-        </div>
-      </section>
-
       <main>
         <section id="gallery" className="section">
           <h2>Gallery</h2>

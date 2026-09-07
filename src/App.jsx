@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Routes, Route, NavLink, Link } from "react-router-dom";
 
-const Home = React.lazy(() => import("./pages/Home"));
 const GalleryPage = React.lazy(() => import("./pages/GalleryPage"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
 const TestimonialsPage = React.lazy(() => import("./pages/Testimonials"));
@@ -56,7 +55,7 @@ export default function App() {
       </section>
       <Suspense fallback={<div className="section">Loading…</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<GalleryPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
