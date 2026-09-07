@@ -1,12 +1,22 @@
 [
   {
-    "name": "Sarah M.",
-    "city": "Seattle",
-    "quote": "Karl built a beautiful dining table — top quality and excellent communication."
+    "name": "Emily T.",
+    "city": "Lenexa",
+    "quote": "The coat hanger is beautifully made and looks fantastic in my entryway. It feels sturdy, polished, and custom in every way."
   },
   {
-    "name": "Tom R.",
-    "city": "Portland",
-    "quote": "Fantastic craftsmanship. Highly recommended."
+    "name": "Marcus L.",
+    "city": "Shawnee",
+    "quote": "I ordered one for my closet and it instantly elevated the whole room. The craftsmanship is excellent and the finish is even better in person."
+  },
+  {
+    "name": "Jennifer H.",
+    "city": "Overland Park",
+    "quote": "This is one of the nicest wooden coat hangers I’ve ever seen. It’s strong, beautiful, and clearly made with a lot of care."
+  },
+  {
+    "name": "David P.",
+    "city": "Prarie Village",
+    "quote": "The hanger looks premium, feels solid, and makes my space feel more polished. I’ve already gotten compliments from everyone who sees it."
   }
 ]
